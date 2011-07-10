@@ -14,6 +14,16 @@
 	In the next future, it will be able to send mapping to ES cluster.
 	</description>
 
+	<licenses>
+		<license>
+			<name>CeCILL-B V1</name>
+			<distribution>repo</distribution>
+			<url>http://www.cecill.info/licences/Licence_CeCILL-B_V1-en.txt</url>
+		</license>
+	</licenses>
+
+	<prerequisites><maven>2.0</maven></prerequisites>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.apache.maven</groupId>
@@ -41,6 +51,28 @@
 		</dependency>
 	</dependencies>
 
+	<issueManagement>
+		<system>GitHub</system>
+		<url>https://github.com/dadoonet/esmavenplugin/issues/</url>
+	</issueManagement>
+	<inceptionYear>2011</inceptionYear>
+	<developers>
+		<developer>
+			<id>dadoonet</id>
+			<name>David Pilato</name>
+			<email>david@pilato.fr</email>
+			<timezone>Europe/Paris</timezone>
+		</developer>
+	</developers>
+	<scm>
+		<connection>git://github.com/dadoonet/esmavenplugin.git</connection>
+		<developerConnection>git@github.com:dadoonet/esmavenplugin.git</developerConnection>
+		<url>https://github.com/dadoonet/esmavenplugin</url>
+	</scm>
+	<organization>
+		<name>Dadoo.net ;-)</name>
+		<url>http://dev.david.pilato.fr/</url>
+	</organization>
 	<build>
 		<plugins>
 			<plugin>
@@ -78,6 +110,25 @@
 				</executions>
 			</plugin>
 
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>3.0-beta-3</version>
+			</plugin>
 		</plugins>
 	</build>
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.8</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jxr-plugin</artifactId>
+				<version>2.2</version>
+			</plugin>
+		</plugins>
+	</reporting>
 </project>

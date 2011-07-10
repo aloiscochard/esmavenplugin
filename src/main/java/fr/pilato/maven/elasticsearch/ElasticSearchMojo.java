@@ -43,6 +43,7 @@ public class ElasticSearchMojo extends AbstractMojo {
 	// private PropertySignatureSource ass;
 
 	/**
+	 * Indicates all classes that you need to create mapping
 	 * @parameter
 	 */
 	private String[] classes;
@@ -57,6 +58,7 @@ public class ElasticSearchMojo extends AbstractMojo {
     private MavenProject project;
     
     /**
+     * Output Directory for generating mapping files
      * @parameter default-value="${project.build.directory}/elasticsearch"
      */
     private String outputDirectory;
