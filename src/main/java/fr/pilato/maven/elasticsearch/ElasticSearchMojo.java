@@ -158,14 +158,20 @@ public class ElasticSearchMojo extends AbstractMojo {
 					
 					Annotation annos[] = _class.getAnnotations();
 					Annotation anno = _class.getAnnotation(Searchable.class);
+
+					if (anno == null) {
+						// TODO WTF ! I cannot find the annotation from here
+						getLog().error("Annotation Searchable can not be found on " + classname);
+					}
 					
+					// This is just a test to iterate all the annotations in debug mode !
 					for (int i = 0; i < annos.length; i++) {
 						Class<?> __class = annos[i].annotationType();
 						if (__class.equals(Searchable.class)) {
 							getLog().debug("   ***c** BINGO ********");
 						}
 					}
-					
+
 					getLog().debug("DONE");
 			        mapper.add(_class);
 				}
